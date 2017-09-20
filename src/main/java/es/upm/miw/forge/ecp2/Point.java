@@ -36,6 +36,14 @@ public class Point {
         this.x -= origin.getX();
         this.y -= origin.getY();
     }
+    
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
 
     @Override
     public String toString() {
