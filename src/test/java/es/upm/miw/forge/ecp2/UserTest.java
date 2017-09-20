@@ -33,5 +33,11 @@ public class UserTest {
         user = new User(4, "laura", "zeira"); 
         assertEquals("L.",user.initials());
     }
+    
+    @Test
+    public void testFullNameMayusFamily() {
+        user = new User(3, "fernando", "grand"); 
+        assertEquals("Fernando GRAND",user.fullNameMayusFamily());
+    }
 
 }
