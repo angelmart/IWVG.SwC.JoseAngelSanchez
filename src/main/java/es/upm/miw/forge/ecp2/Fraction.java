@@ -26,4 +26,12 @@ public class Fraction {
         return (double) numerator / denominator;
     }
     
+    public boolean isDecimal() {
+        long x = 1;
+        while (x < this.denominator && x <= Long.MAX_VALUE / 10) {
+            x *= 10;
+        }
+        return x == this.denominator;
+    }
+    
 }

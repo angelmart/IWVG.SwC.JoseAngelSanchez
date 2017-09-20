@@ -33,5 +33,13 @@ public class FractionTest {
         fraction = new Fraction(4,8);
         assertEquals(0.5, fraction.decimal(),0.5);
     }
+    
+    @Test
+    public void testIsDecimal() {
+        fraction = new Fraction(5,10);
+        assertEquals(true, fraction.isDecimal());
+        fraction = new Fraction(5,20);
+        assertEquals(false, fraction.isDecimal());
+    }
 
 }
