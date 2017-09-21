@@ -69,12 +69,13 @@ public class Fraction {
     }
     
     public boolean isDecimal() {
-        long x = 1;
-        while (x < this.denominator && x <= Long.MAX_VALUE / 10) {
+        Integer x = 1;
+        while (x < Math.abs(this.denominator) && x <= Integer.MAX_VALUE / 10) {
             x *= 10;
         }
-        return x == this.denominator;
+        return x == Math.abs(this.denominator);
     }
+
     public boolean isUnitaria(){
         if(this.numerator== this.denominator){
             return true;

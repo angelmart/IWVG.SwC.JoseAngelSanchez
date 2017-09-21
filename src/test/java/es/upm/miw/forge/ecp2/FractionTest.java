@@ -54,6 +54,8 @@ public class FractionTest {
         assertEquals(true, fraction.isDecimal());
         fraction = new Fraction(5,20);
         assertEquals(false, fraction.isDecimal());
+        fraction = new Fraction(5,-100);
+        assertEquals(true, fraction.isDecimal());
     }
     
     @Test
