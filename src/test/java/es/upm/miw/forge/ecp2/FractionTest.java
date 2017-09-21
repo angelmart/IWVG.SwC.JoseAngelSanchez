@@ -10,11 +10,14 @@ public class FractionTest {
     private Fraction fraction;
     private Fraction fraction2;
     private Fraction fraction3;
+    private Fraction fraction4;
+
     
     @Before
     public void before(){
         fraction = new Fraction(2,6);
         fraction3 = new Fraction(1,3);
+        fraction4 = new Fraction(2,2);
     }
 
     @Test
@@ -51,6 +54,14 @@ public class FractionTest {
         assertEquals(true, fraction.isDecimal());
         fraction = new Fraction(5,20);
         assertEquals(false, fraction.isDecimal());
+    }
+    
+    @Test
+    public void testIsUnitaria(){
+        assertEquals(true, fraction4.isUnitaria());
+        assertEquals(false, fraction.isUnitaria());
+
+        
     }
 
 }

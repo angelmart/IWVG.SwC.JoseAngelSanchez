@@ -75,4 +75,13 @@ public class Fraction {
         }
         return x == this.denominator;
     }
+    public boolean isUnitaria(){
+        if(this.numerator== this.denominator){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
 }
