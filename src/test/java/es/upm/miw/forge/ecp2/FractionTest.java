@@ -43,9 +43,9 @@ public class FractionTest {
     @Test
     public void testIsEquivalent() {
         fraction2 = new Fraction(1,3);
-        assertEquals(true,fraction.isEquivalent(fraction2));
+        assertEquals("Es equivalente",fraction.isEquivalent(fraction2));
         fraction3 = new Fraction(5,7);
-        assertEquals(false,fraction.isEquivalent(fraction3));
+        assertEquals("No es equivalente",fraction.isEquivalent(fraction3));
     }
     
     @Test
