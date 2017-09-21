@@ -51,7 +51,7 @@ public class DecimalCollectionTest {
 	
     @Test
     public void testLower() {
-        assertEquals(-1.0, this.decimalCollection.lower(), 10e-5);
+        assertEquals(-1.0,this.decimalCollection.lower(), 10e-5);
     }
 
 	@Test
