@@ -60,12 +60,8 @@ public class Fraction {
         return (double) numerator / denominator;
     }
     
-    public String isEquivalent(Fraction fraction2) {
-        if ((this.numerator * fraction2.denominator) == (this.denominator * fraction2.numerator)) {
-            return "Es equivalente";
-        } else {
-            return "No es equivalente";
-        }
+    public boolean isEquivalent(Fraction fraction2) {
+        return (this.numerator * fraction2.denominator) == (this.denominator * fraction2.numerator);
     }
     
     public boolean isDecimal() {
