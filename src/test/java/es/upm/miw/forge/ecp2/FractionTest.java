@@ -9,14 +9,12 @@ public class FractionTest {
 
     private Fraction fraction;
     private Fraction fraction2;
-    private Fraction fraction3;
     private Fraction fraction4;
 
     
     @Before
     public void before(){
         fraction = new Fraction(2,6);
-        fraction3 = new Fraction(1,3);
         fraction4 = new Fraction(2,2);
     }
 
@@ -42,10 +40,8 @@ public class FractionTest {
     
     @Test
     public void testIsEquivalent() {
-        fraction2 = new Fraction(1,3);
-        assertEquals("Es equivalente",fraction.isEquivalent(fraction2));
-        fraction3 = new Fraction(5,7);
-        assertEquals("No es equivalente",fraction.isEquivalent(fraction3));
+        assertEquals(true, fraction4.isUnitaria());
+        assertEquals(false, fraction.isUnitaria());
     }
     
     @Test
