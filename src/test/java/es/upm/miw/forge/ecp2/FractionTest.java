@@ -8,7 +8,6 @@ import org.junit.Test;
 public class FractionTest {
 
     private Fraction fraction;
-    private Fraction fraction2;
     private Fraction fraction4;
 
     
