@@ -8,19 +8,18 @@ import org.junit.Test;
 public class FractionTest {
 
     private Fraction fraction;
-    private Fraction fraction2;
+
     private Fraction fraction4;
 
-    
     @Before
-    public void before(){
-        fraction = new Fraction(2,6);
-        fraction4 = new Fraction(2,2);
+    public void before() {
+        fraction = new Fraction(2, 6);
+        fraction4 = new Fraction(2, 2);
     }
 
     @Test
     public void testFractionIntInt() {
-        fraction = new Fraction(3,5);
+        fraction = new Fraction(3, 5);
         assertEquals(3, fraction.getNumerator());
         assertEquals(5, fraction.getDenominator());
     }
@@ -34,32 +33,36 @@ public class FractionTest {
 
     @Test
     public void testDecimal() {
-        fraction = new Fraction(4,8);
-        assertEquals(0.5, fraction.decimal(),0.5);
+        fraction = new Fraction(4, 8);
+        assertEquals(0.5, fraction.decimal(), 0.5);
     }
-    
+
     @Test
     public void testIsEquivalent() {
-        assertEquals(true, fraction4.isUnitaria());
-        assertEquals(false, fraction.isUnitaria());
+        fraction = new Fraction(2, 6);
+        fraction4 = new Fraction(1, 3);
+        assertEquals(true, fraction.isEquivalent(fraction4));
+        fraction4 = new Fraction(5, 7);
+        assertEquals(false, fraction.isEquivalent(fraction4));
     }
-    
+
     @Test
     public void testIsDecimal() {
-        fraction = new Fraction(5,10);
+        fraction = new Fraction(5, 10);
         assertEquals(true, fraction.isDecimal());
-        fraction = new Fraction(5,20);
+        fraction = new Fraction(5, 20);
         assertEquals(false, fraction.isDecimal());
-        fraction = new Fraction(5,-100);
+        fraction = new Fraction(5, -100);
         assertEquals(true, fraction.isDecimal());
     }
-    
+
     @Test
-    public void testIsUnitaria(){
+    public void testIsUnitaria() {
+        fraction = new Fraction(2, 6);
+        fraction4 = new Fraction(2, 2);
         assertEquals(true, fraction4.isUnitaria());
         assertEquals(false, fraction.isUnitaria());
 
-        
     }
 
 }
