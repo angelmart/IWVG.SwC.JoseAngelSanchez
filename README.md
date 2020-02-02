@@ -4,5 +4,5 @@
 # Componentes
 
 * Joaquín Zamora @Joaquín-z
-* Antonio Manuel Chain @DantDP
+* @DantDP
 * Aitor Bernal @Chinegua
